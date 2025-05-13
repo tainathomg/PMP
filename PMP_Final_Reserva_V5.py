@@ -3,6 +3,7 @@
 
 # In[1]:
 
+from pathlib import Path
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -145,7 +146,8 @@ colors = {
 
 
 #importar e transformar para float
-amostras_df = pd.read_csv(r'C:\Users\LabMEG_09\Downloads\PMP_produtos\Reserva\Amostras_completo.csv', sep=";")
+arquivo = Path(".").resolve() / "Amostras_completo.csv"
+amostras_df = pd.read_csv(arquivo, sep=";")
 amostras_df = amostras_df.rename(columns={'Fe2O3(t)': 'Fe2O3t'})
 colunas_numericas = ['SiO2', 'MgO', 'TiO2', 'Al2O3', 'Fe2O3t', 'MnO','CaO', 'Na2O', 'K2O', 'P2O5', 'Fe2O3', 'FeO', 'Ba', 'Rb','Sr', 'Itrio', 'Zr', 'Ti']
 for coluna in colunas_numericas:
