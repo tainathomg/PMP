@@ -1047,7 +1047,7 @@ def create_dashboard(amostras_df, base_path):
     with open(output_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
 
-    st.components.v1.html(html_content, height=1000, scrolling=True)
+    st.components.v1.html(html_content, height=800, scrolling=True, sandbox=None)
 
   
 
