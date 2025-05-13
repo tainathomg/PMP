@@ -154,7 +154,7 @@ amostras_df = amostras_df.rename(columns={'Fe2O3(t)': 'Fe2O3t'})
 colunas_numericas = ['SiO2', 'MgO', 'TiO2', 'Al2O3', 'Fe2O3t', 'MnO','CaO', 'Na2O', 'K2O', 'P2O5', 'Fe2O3', 'FeO', 'Ba', 'Rb','Sr', 'Itrio', 'Zr', 'Ti']
 for coluna in colunas_numericas:
     amostras_df[coluna] = pd.to_numeric(amostras_df[coluna], errors='coerce')
-print(amostras_df.dtypes)
+(amostras_df.dtypes)
 
 
 # In[5]:
@@ -218,7 +218,7 @@ amostras_df['Ba/Itrio'] = amostras_df['Ba'] / amostras_df['Itrio']
 amostras_df['Ti/Itrio'] = amostras_df['Ti'] / amostras_df['Itrio']
 amostras_df['Ti/Zr'] = amostras_df['Ti'] / amostras_df['Zr']
 amostras_df['Zr/Itrio'] = amostras_df['Zr'] / amostras_df['Itrio']
-#amostras_df
+amostras_df
 
 
 # In[9]:
@@ -227,7 +227,7 @@ amostras_df['Zr/Itrio'] = amostras_df['Zr'] / amostras_df['Itrio']
 #df classificação peate
 colunas_necessarias = ['SiO2', 'TiO2', 'P2O5', 'Fe2O3t', 'Sr', 'Ba', 'Zr', 'Ti/Itrio', 'Ti/Zr', 'Zr/Itrio', 'Sr/Itrio', 'Ba/Itrio']
 amostras_df = amostras_df.dropna(subset=colunas_necessarias)
-#amostras_df
+amostras_df
 
 
 # In[10]:
@@ -244,7 +244,7 @@ resultado = pd.DataFrame({
     'Porcentagem': porcentagem.round(2).values,
     'Cores': [get_color(x) for x in contagem.index]  
 })
-print(resultado)
+(resultado)
 #exportar excel
 amostras_df.to_excel(r'C:\Users\LabMEG_09\Downloads\amostras_classificadas2.xlsx', index=False) #exportar
 
@@ -300,17 +300,17 @@ def main():
     # Gerar QR code
     qr_path = generate_qr_code(url_exemplo, qr_path)
     
-    print("\nInstruções para disponibilizar o dashboard publicamente:")
-    print("1. Crie um repositório no GitHub (por exemplo: pmp-dashboard)")
-    print("2. Faça upload do arquivo dashboard_final.html para o repositório")
-    print("3. Nas configurações do repositório, ative o GitHub Pages:")
-    print("   - Vá em Settings > Pages")
-    print("   - Selecione a branch main e pasta root")
-    print("   - Clique em Save")
-    print("4. Após alguns minutos, seu dashboard estará disponível em:")
-    print("   https://seu-usuario.github.io/pmp-dashboard/dashboard_final.html")
-    print(f"\nQR Code gerado em: {qr_path}")
-    print("5. Atualize este script com a URL real e gere o QR code novamente")
+    ("\nInstruções para disponibilizar o dashboard publicamente:")
+    ("1. Crie um repositório no GitHub (por exemplo: pmp-dashboard)")
+    ("2. Faça upload do arquivo dashboard_final.html para o repositório")
+    ("3. Nas configurações do repositório, ative o GitHub Pages:")
+    ("   - Vá em Settings > Pages")
+    ("   - Selecione a branch main e pasta root")
+    ("   - Clique em Save")
+    ("4. Após alguns minutos, seu dashboard estará disponível em:")
+    ("   https://seu-usuario.github.io/pmp-dashboard/dashboard_final.html")
+    (f"\nQR Code gerado em: {qr_path}")
+    ("5. Atualize este script com a URL real e gere o QR code novamente")
 
 if __name__ == "__main__":
     main() 
@@ -416,7 +416,7 @@ def create_geo_map():
     caminho_exportacao = base_path + "mapa_suites.html"
     fig.write_html(caminho_exportacao)
     
-    print(f"Mapa exportado com sucesso para: {caminho_exportacao}")
+    (f"Mapa exportado com sucesso para: {caminho_exportacao}")
     return fig
 
 
