@@ -105,7 +105,7 @@ classificacao_rochas = {
     },
     "Esmeralda": {
         "SiO2": (48, 55),
-        "TiO2": (1.1, 2.3),
+        "TiO2": (1.1, 2.3),1
         "P2O5": (0.1, 0.35),
         "Fe2O3t": (12.0, 17),
         "Sr": (0, 250),
@@ -1044,7 +1044,7 @@ def create_dashboard(amostras_df, base_path):
     with open(output_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
 
-    st.components.v1.html(html_content, height=700, scrolling=True)
+    st.components.v1.html(html_content, height=750, scrolling=True)
   
 
   
