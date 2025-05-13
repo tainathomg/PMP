@@ -42,7 +42,7 @@ import numpy as np
 
 # In[3]:
 
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 
 #DICIONARIOS
 ##dicionário classificação
