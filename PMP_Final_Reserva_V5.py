@@ -42,6 +42,7 @@ import numpy as np
 
 # In[3]:
 
+st.set_page_config(layout="wide")
 
 #DICIONARIOS
 ##dicionário classificação
@@ -1043,7 +1044,7 @@ def create_dashboard(amostras_df, base_path):
     with open(output_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
 
-    st.components.v1.html(DASHBOARD_TEMPLATE_UPDATED, height=1000, width=1400, scrolling=True)
+    st.components.v1.html(html_content, height=1000, width=1400, scrolling=True)
   
 
   
