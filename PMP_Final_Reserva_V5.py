@@ -163,7 +163,7 @@ print(amostras_df.dtypes)
 #Configuração de caminhos
 base_path = r'C:\Users\LabMEG_09\Downloads\PMP_produtos\\'
 os.makedirs(base_path, exist_ok=True)
-mapbox
+
 
 # In[6]:
 
@@ -412,7 +412,7 @@ def create_geo_map():
         margin={"r":0,"t":40,"l":0,"b":0}
     )
   
-    st.plotly_chart(fig)
+    
   
     # Exportar o mapa
     caminho_exportacao = base_path + "mapa_suites.html"
@@ -973,6 +973,7 @@ def create_dashboard(amostras_df, base_path):
         height=600,
         legend_title_text="Magma types" 
     )
+    st.plotly_chart(fig_map)
 
     # Donut (rosca)
     count = amostras_df['Classificacao'].value_counts()
