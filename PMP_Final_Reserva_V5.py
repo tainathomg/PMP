@@ -973,6 +973,7 @@ def create_dashboard(amostras_df, base_path):
         height=600,
         legend_title_text="Magma types" 
     )
+    st.plotly_chart(fig_map)
 
     # Donut (rosca)
     count = amostras_df['Classificacao'].value_counts()
