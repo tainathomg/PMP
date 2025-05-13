@@ -385,7 +385,7 @@ def create_bar_chart():
 #criar mapa
 def create_geo_map():
     # Criar o mapa com as cores padrão do projeto
-    fig = px.scatter_map(amostras_df,
+    fig = px.scatter_mapbox(amostras_df,
                             lat="LATf",
                             lon="LONGf",
                             color="Classificacao",
@@ -955,7 +955,7 @@ def create_dashboard(amostras_df, base_path):
     amostras_df['Classificacao'] = amostras_df['Classificacao'].str.lower()
     
     # Criar mapa com cores explícitas
-    fig_map = px.scatter_map(
+    fig_map = px.scatter_mapbox(
         amostras_df,
         lat="LATf",
         lon="LONGf",
