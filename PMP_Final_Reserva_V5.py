@@ -154,7 +154,7 @@ amostras_df = amostras_df.rename(columns={'Fe2O3(t)': 'Fe2O3t'})
 colunas_numericas = ['SiO2', 'MgO', 'TiO2', 'Al2O3', 'Fe2O3t', 'MnO','CaO', 'Na2O', 'K2O', 'P2O5', 'Fe2O3', 'FeO', 'Ba', 'Rb','Sr', 'Itrio', 'Zr', 'Ti']
 for coluna in colunas_numericas:
     amostras_df[coluna] = pd.to_numeric(amostras_df[coluna], errors='coerce')
-#print(amostras_df.dtypes)
+print(amostras_df.dtypes)
 
 
 # In[5]:
@@ -218,7 +218,7 @@ amostras_df['Ba/Itrio'] = amostras_df['Ba'] / amostras_df['Itrio']
 amostras_df['Ti/Itrio'] = amostras_df['Ti'] / amostras_df['Itrio']
 amostras_df['Ti/Zr'] = amostras_df['Ti'] / amostras_df['Zr']
 amostras_df['Zr/Itrio'] = amostras_df['Zr'] / amostras_df['Itrio']
-amostras_df
+#amostras_df
 
 
 # In[9]:
@@ -227,7 +227,7 @@ amostras_df
 #df classificação peate
 colunas_necessarias = ['SiO2', 'TiO2', 'P2O5', 'Fe2O3t', 'Sr', 'Ba', 'Zr', 'Ti/Itrio', 'Ti/Zr', 'Zr/Itrio', 'Sr/Itrio', 'Ba/Itrio']
 amostras_df = amostras_df.dropna(subset=colunas_necessarias)
-amostras_df
+#amostras_df
 
 
 # In[10]:
@@ -244,7 +244,7 @@ resultado = pd.DataFrame({
     'Porcentagem': porcentagem.round(2).values,
     'Cores': [get_color(x) for x in contagem.index]  
 })
-#print(resultado)
+print(resultado)
 #exportar excel
 amostras_df.to_excel(r'C:\Users\LabMEG_09\Downloads\amostras_classificadas2.xlsx', index=False) #exportar
 
