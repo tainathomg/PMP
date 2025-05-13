@@ -154,7 +154,7 @@ for coluna in colunas_numericas:
     amostras_df[coluna] = pd.to_numeric(amostras_df[coluna], errors='coerce')
 print(amostras_df.dtypes)
 
-scatter_map
+
 # In[5]:
 
 
