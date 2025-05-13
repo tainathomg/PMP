@@ -411,7 +411,9 @@ def create_geo_map():
         ],
         margin={"r":0,"t":40,"l":0,"b":0}
     )
-    
+  
+    st.plotly_chart(fig)
+  
     # Exportar o mapa
     caminho_exportacao = base_path + "mapa_suites.html"
     fig.write_html(caminho_exportacao)
