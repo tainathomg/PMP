@@ -1040,11 +1040,10 @@ def create_dashboard(amostras_df, base_path):
     print(f"Dashboard criado com sucesso em: {output_path}")
 
     # Mostra no Streamlit
-    st.title("Dashboard Interativo")
     with open(output_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
 
-    components.html(html_content, height=800, scrolling=True)
+    st.components.v1.html(DASHBOARD_TEMPLATE_UPDATED, height=1000, width=1400, scrolling=True)
   
 
   
